@@ -11,6 +11,10 @@
 		673CD1B92634140A00EFEB62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1B82634140A00EFEB62 /* ContentView.swift */; };
 		673CD1BB2634140A00EFEB62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 673CD1BA2634140A00EFEB62 /* Assets.xcassets */; };
 		673CD1BE2634140A00EFEB62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 673CD1BD2634140A00EFEB62 /* Preview Assets.xcassets */; };
+		673CD1C8263414FD00EFEB62 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1C7263414FD00EFEB62 /* Repo.swift */; };
+		673CD1CC2634152300EFEB62 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1CB2634152300EFEB62 /* RepoListViewModel.swift */; };
+		673CD1D02634156400EFEB62 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1CF2634156400EFEB62 /* GitHubAPI.swift */; };
+		673CD1D32634166800EFEB62 /* RepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1D22634166800EFEB62 /* RepoListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		673CD1BA2634140A00EFEB62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		673CD1BD2634140A00EFEB62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		673CD1BF2634140A00EFEB62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		673CD1C7263414FD00EFEB62 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		673CD1CB2634152300EFEB62 /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
+		673CD1CF2634156400EFEB62 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		673CD1D22634166800EFEB62 /* RepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,8 @@
 		673CD1B52634140A00EFEB62 /* GitHubRepos */ = {
 			isa = PBXGroup;
 			children = (
+				673CD1CE2634154800EFEB62 /* Network */,
+				673CD1C62634145000EFEB62 /* RepoList */,
 				673CD1B62634140A00EFEB62 /* GitHubReposApp.swift */,
 				673CD1B82634140A00EFEB62 /* ContentView.swift */,
 				673CD1BA2634140A00EFEB62 /* Assets.xcassets */,
@@ -67,6 +77,24 @@
 				673CD1BD2634140A00EFEB62 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		673CD1C62634145000EFEB62 /* RepoList */ = {
+			isa = PBXGroup;
+			children = (
+				673CD1C7263414FD00EFEB62 /* Repo.swift */,
+				673CD1CB2634152300EFEB62 /* RepoListViewModel.swift */,
+				673CD1D22634166800EFEB62 /* RepoListView.swift */,
+			);
+			path = RepoList;
+			sourceTree = "<group>";
+		};
+		673CD1CE2634154800EFEB62 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				673CD1CF2634156400EFEB62 /* GitHubAPI.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673CD1CC2634152300EFEB62 /* RepoListViewModel.swift in Sources */,
+				673CD1C8263414FD00EFEB62 /* Repo.swift in Sources */,
 				673CD1B92634140A00EFEB62 /* ContentView.swift in Sources */,
+				673CD1D02634156400EFEB62 /* GitHubAPI.swift in Sources */,
+				673CD1D32634166800EFEB62 /* RepoListView.swift in Sources */,
 				673CD1B72634140A00EFEB62 /* GitHubReposApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

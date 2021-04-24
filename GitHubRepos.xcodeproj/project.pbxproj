@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		673B3F792634534400836814 /* RepoStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B3F782634534400836814 /* RepoStatistics.swift */; };
 		673CD1B72634140A00EFEB62 /* GitHubReposApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1B62634140A00EFEB62 /* GitHubReposApp.swift */; };
 		673CD1B92634140A00EFEB62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1B82634140A00EFEB62 /* ContentView.swift */; };
 		673CD1BB2634140A00EFEB62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 673CD1BA2634140A00EFEB62 /* Assets.xcassets */; };
@@ -15,9 +16,15 @@
 		673CD1CC2634152300EFEB62 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1CB2634152300EFEB62 /* RepoListViewModel.swift */; };
 		673CD1D02634156400EFEB62 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1CF2634156400EFEB62 /* GitHubAPI.swift */; };
 		673CD1D32634166800EFEB62 /* RepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1D22634166800EFEB62 /* RepoListView.swift */; };
+		673CD1DC2634215000EFEB62 /* RepoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1DB2634215000EFEB62 /* RepoDetails.swift */; };
+		673CD1DF2634243800EFEB62 /* RepoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1DE2634243800EFEB62 /* RepoDetailsViewModel.swift */; };
+		673CD1E32634272700EFEB62 /* RepoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1E22634272700EFEB62 /* RepoDetailsView.swift */; };
+		673CD1E72634436400EFEB62 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1E62634436400EFEB62 /* ViewModelState.swift */; };
+		673CD1ED26344A1000EFEB62 /* checkVMState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1EC26344A1000EFEB62 /* checkVMState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		673B3F782634534400836814 /* RepoStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoStatistics.swift; sourceTree = "<group>"; };
 		673CD1B32634140A00EFEB62 /* GitHubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		673CD1B62634140A00EFEB62 /* GitHubReposApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReposApp.swift; sourceTree = "<group>"; };
 		673CD1B82634140A00EFEB62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,6 +35,11 @@
 		673CD1CB2634152300EFEB62 /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
 		673CD1CF2634156400EFEB62 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		673CD1D22634166800EFEB62 /* RepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListView.swift; sourceTree = "<group>"; };
+		673CD1DB2634215000EFEB62 /* RepoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetails.swift; sourceTree = "<group>"; };
+		673CD1DE2634243800EFEB62 /* RepoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewModel.swift; sourceTree = "<group>"; };
+		673CD1E22634272700EFEB62 /* RepoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsView.swift; sourceTree = "<group>"; };
+		673CD1E62634436400EFEB62 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
+		673CD1EC26344A1000EFEB62 /* checkVMState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkVMState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		673B3F772634531300836814 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				673CD1E22634272700EFEB62 /* RepoDetailsView.swift */,
+				673B3F782634534400836814 /* RepoStatistics.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		673CD1AA2634140A00EFEB62 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +81,8 @@
 		673CD1B52634140A00EFEB62 /* GitHubRepos */ = {
 			isa = PBXGroup;
 			children = (
+				673CD1E52634435000EFEB62 /* Utilities */,
+				673CD1DA2634213100EFEB62 /* RepoDetails */,
 				673CD1CE2634154800EFEB62 /* Network */,
 				673CD1C62634145000EFEB62 /* RepoList */,
 				673CD1B62634140A00EFEB62 /* GitHubReposApp.swift */,
@@ -95,6 +118,25 @@
 				673CD1CF2634156400EFEB62 /* GitHubAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		673CD1DA2634213100EFEB62 /* RepoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				673B3F772634531300836814 /* Views */,
+				673CD1DB2634215000EFEB62 /* RepoDetails.swift */,
+				673CD1DE2634243800EFEB62 /* RepoDetailsViewModel.swift */,
+			);
+			path = RepoDetails;
+			sourceTree = "<group>";
+		};
+		673CD1E52634435000EFEB62 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				673CD1E62634436400EFEB62 /* ViewModelState.swift */,
+				673CD1EC26344A1000EFEB62 /* checkVMState.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,10 +208,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673CD1E72634436400EFEB62 /* ViewModelState.swift in Sources */,
 				673CD1CC2634152300EFEB62 /* RepoListViewModel.swift in Sources */,
 				673CD1C8263414FD00EFEB62 /* Repo.swift in Sources */,
 				673CD1B92634140A00EFEB62 /* ContentView.swift in Sources */,
+				673CD1DC2634215000EFEB62 /* RepoDetails.swift in Sources */,
+				673CD1E32634272700EFEB62 /* RepoDetailsView.swift in Sources */,
+				673CD1ED26344A1000EFEB62 /* checkVMState.swift in Sources */,
 				673CD1D02634156400EFEB62 /* GitHubAPI.swift in Sources */,
+				673B3F792634534400836814 /* RepoStatistics.swift in Sources */,
+				673CD1DF2634243800EFEB62 /* RepoDetailsViewModel.swift in Sources */,
 				673CD1D32634166800EFEB62 /* RepoListView.swift in Sources */,
 				673CD1B72634140A00EFEB62 /* GitHubReposApp.swift in Sources */,
 			);

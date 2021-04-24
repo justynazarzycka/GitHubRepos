@@ -9,17 +9,12 @@ import Foundation
 import Combine
 
 final class RepoListViewModel: ObservableObject {
-    @Published var state = State.empty
+    @Published var state = ViewModelState.empty
     @Published var repos: [Repo] = []
     
     private var gitHubAPI = GitHubAPI()
     
-    enum State {
-        case empty
-        case loading(Cancellable)
-        case loaded
-        case error(Error)
-    }
+
     
     init() {
         loadRepos()

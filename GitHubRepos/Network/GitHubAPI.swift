@@ -15,15 +15,18 @@ struct GitHubAPI {
     
     // API endpoints.
     private enum EndPoint {
-        static let baseURL = URL(string: "https://api.github.com/users/allegro")!
+        static let baseURL = URL(string: "https://api.github.com")!
         
         // lists all repos for specified organization
         case repos
+        case repoDetails(_ name: String)
         
         var url: URL {
             switch self {
             case .repos:
-                return EndPoint.baseURL.appendingPathComponent("/repos")
+                return EndPoint.baseURL.appendingPathComponent("/users/allegro/repos")
+            case .repoDetails(let name):
+                return EndPoint.baseURL.appendingPathComponent("/repos/allegro/\(name)")
             }
         }
     }
@@ -31,6 +34,13 @@ struct GitHubAPI {
     
     func getRepos() -> AnyPublisher<[Repo], Error> {
         request(for: EndPoint.repos)
+            .receive(on: RunLoop.main)
+            .eraseToAnyPublisher()
+    }
+    
+    
+    func getRepoDetails(for name: String) -> AnyPublisher<RepoDetails, Error> {
+        request(for: EndPoint.repoDetails(name))
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }

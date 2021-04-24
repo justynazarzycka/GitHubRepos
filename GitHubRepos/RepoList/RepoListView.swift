@@ -12,31 +12,20 @@ struct RepoListView: View {
     
     var body: some View {
         NavigationView {
-            content
+            checkVMState(content: repoList, state: repoListVM.state)
                 .navigationTitle("Allegro Repos")
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
     
-    private var content: some View {
-        switch repoListVM.state {
-        case .empty:
-            return AnyView(EmptyView())
-        case .loading:
-            return AnyView(ProgressView())
-        case .loaded:
-            return AnyView(self.repoList)
-        case let .error(error):
-            return AnyView(Text(error.localizedDescription))
-        }
-    }
-    
-    private var repoList: some View {
-        List {
+    private var repoList: AnyView {
+        AnyView(List {
             ForEach(repoListVM.repos) { repo in
-                Text(repo.name)
+                NavigationLink(destination: RepoDetailsView(name: repo.name)) {
+                    Text(repo.name)
+                }
             }
-        }
+        })
     }
 }
 

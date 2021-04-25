@@ -16,7 +16,10 @@ struct RepoDetails {
     var stargazers: Int
     var watchers: Int
     var forks: Int
-    var contributors: [Contributor]
+    
+    // not every repo has a specified one language
+    var language: String?
+    var contributors: [Contributor]?
 }
 
 extension RepoDetails {
@@ -27,10 +30,11 @@ extension RepoDetails {
         var stargazers: Int
         var watchers: Int
         var forks: Int
+        var language: String?
         
         enum CodingKeys: String, CodingKey {
             case stargazers = "stargazers_count"
-            case id, name, description, watchers, forks
+            case id, name, description, watchers, forks, language
         }
     }
     

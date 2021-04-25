@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RepoDetails: Codable {
+struct RepoDetails {
     var id: Int
     var name: String
     
@@ -16,9 +16,27 @@ struct RepoDetails: Codable {
     var stargazers: Int
     var watchers: Int
     var forks: Int
+    var contributors: [Contributor]
+}
+
+extension RepoDetails {
+    struct Basic: Decodable {
+        var id: Int
+        var name: String
+        var description: String?
+        var stargazers: Int
+        var watchers: Int
+        var forks: Int
+        
+        enum CodingKeys: String, CodingKey {
+            case stargazers = "stargazers_count"
+            case id, name, description, watchers, forks
+        }
+    }
     
-    enum CodingKeys: String, CodingKey {
-        case stargazers = "stargazers_count"
-        case id, name, description, watchers, forks
+    struct Contributor: Decodable, Identifiable {
+        var id: Int
+        var login: String
+        var contributions: Int
     }
 }

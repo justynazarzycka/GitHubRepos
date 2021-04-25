@@ -25,7 +25,7 @@ final class RepoListViewModel: ObservableObject {
 extension RepoListViewModel {
     
     func loadRepos() {
-        self.state = .loading(gitHubAPI.getRepos()
+        self.state = .loading(gitHubAPI.getReposList()
             .sink(
                 receiveCompletion: { completion in
                     switch completion {

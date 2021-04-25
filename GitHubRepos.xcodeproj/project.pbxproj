@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6720A997263573400064A98F /* ContributorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A996263573400064A98F /* ContributorsList.swift */; };
 		673B3F792634534400836814 /* RepoStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B3F782634534400836814 /* RepoStatistics.swift */; };
 		673CD1B72634140A00EFEB62 /* GitHubReposApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1B62634140A00EFEB62 /* GitHubReposApp.swift */; };
 		673CD1B92634140A00EFEB62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1B82634140A00EFEB62 /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6720A996263573400064A98F /* ContributorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsList.swift; sourceTree = "<group>"; };
 		673B3F782634534400836814 /* RepoStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoStatistics.swift; sourceTree = "<group>"; };
 		673CD1B32634140A00EFEB62 /* GitHubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		673CD1B62634140A00EFEB62 /* GitHubReposApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReposApp.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				673CD1E22634272700EFEB62 /* RepoDetailsView.swift */,
 				673B3F782634534400836814 /* RepoStatistics.swift */,
+				6720A996263573400064A98F /* ContributorsList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				673CD1E72634436400EFEB62 /* ViewModelState.swift in Sources */,
 				673CD1CC2634152300EFEB62 /* RepoListViewModel.swift in Sources */,
 				673CD1C8263414FD00EFEB62 /* Repo.swift in Sources */,
+				6720A997263573400064A98F /* ContributorsList.swift in Sources */,
 				673CD1B92634140A00EFEB62 /* ContentView.swift in Sources */,
 				673CD1DC2634215000EFEB62 /* RepoDetails.swift in Sources */,
 				673CD1E32634272700EFEB62 /* RepoDetailsView.swift in Sources */,

@@ -23,23 +23,29 @@ struct RepoDetailsView: View {
         guard let repo = repoDetailsVM.repoDetails else {
             return AnyView(Text("Something went worng"))
         }
-
-        return AnyView(VStack {
-            Text(repo.name)
-                .font(.title)
-                .padding()
-            
-            RepoStatistics(stars: repo.stargazers, watchers: repo.watchers, forks: repo.forks)
-                .padding()
-            
-            
-            if let description = repo.description {
-                Text(description)
-                    .padding()
-            }
-            
-            Spacer()
-        })
+        
+        return AnyView(
+            ScrollView {
+                VStack {
+                    Text(repo.name)
+                        .font(.title)
+                        .padding()
+                    
+                    RepoStatistics(stars: repo.stargazers, watchers: repo.watchers, forks: repo.forks)
+                        .padding()
+                    
+                    
+                    if let description = repo.description {
+                        Text(description)
+                            .padding()
+                    }
+                    
+                    ContributorsList(contributors: repo.contributors)
+                    
+                    Spacer()
+                }
+            })
+        
     }
 }
 

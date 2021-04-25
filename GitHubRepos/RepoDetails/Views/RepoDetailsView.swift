@@ -38,6 +38,7 @@ struct RepoDetailsView: View {
                     if let description = repo.description {
                         Text(description)
                             .padding()
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     
                     ContributorsList(contributors: repo.contributors)

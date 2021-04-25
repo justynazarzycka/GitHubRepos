@@ -58,7 +58,14 @@ struct GitHubAPI {
     func mergeRepo(_ repo: RepoDetails.Basic) -> AnyPublisher<RepoDetails, Error> {
         getRepoContributors(for: repo.name)
             .map { contributors in
-                RepoDetails(id: repo.id, name: repo.name, description: repo.description, stargazers: repo.stargazers, watchers: repo.watchers, forks: repo.forks, contributors: contributors)
+                RepoDetails(
+                    id: repo.id,
+                    name: repo.name,
+                    description: repo.description,
+                    stargazers: repo.stargazers,
+                    watchers: repo.watchers,
+                    forks: repo.forks,
+                    contributors: contributors)
             }
             .eraseToAnyPublisher()
     }

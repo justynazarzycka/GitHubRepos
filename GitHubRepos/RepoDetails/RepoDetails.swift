@@ -38,5 +38,11 @@ extension RepoDetails {
         var id: Int
         var login: String
         var contributions: Int
+        var avatarURL: URL
+        
+        enum CodingKeys: String, CodingKey {
+            case avatarURL = "avatar_url"
+            case id, login, contributions
+        }
     }
 }

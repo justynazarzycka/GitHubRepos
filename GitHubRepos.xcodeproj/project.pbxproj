@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6720A997263573400064A98F /* ContributorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6720A996263573400064A98F /* ContributorsList.swift */; };
+		6720A99C26357EAA0064A98F /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6720A99B26357EAA0064A98F /* URLImage */; };
 		673B3F792634534400836814 /* RepoStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B3F782634534400836814 /* RepoStatistics.swift */; };
 		673CD1B72634140A00EFEB62 /* GitHubReposApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1B62634140A00EFEB62 /* GitHubReposApp.swift */; };
 		673CD1B92634140A00EFEB62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CD1B82634140A00EFEB62 /* ContentView.swift */; };
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6720A99C26357EAA0064A98F /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +160,9 @@
 			dependencies = (
 			);
 			name = GitHubRepos;
+			packageProductDependencies = (
+				6720A99B26357EAA0064A98F /* URLImage */,
+			);
 			productName = GitHubRepos;
 			productReference = 673CD1B32634140A00EFEB62 /* GitHubRepos.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +190,9 @@
 				Base,
 			);
 			mainGroup = 673CD1AA2634140A00EFEB62;
+			packageReferences = (
+				6720A99A26357EAA0064A98F /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 673CD1B42634140A00EFEB62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -412,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6720A99A26357EAA0064A98F /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6720A99B26357EAA0064A98F /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6720A99A26357EAA0064A98F /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 673CD1AB2634140A00EFEB62 /* Project object */;
 }

@@ -19,6 +19,7 @@ struct GitHubAPI {
         
         // lists all repos for specified organization
         case repos
+        
         case basicRepoDetails(_ name: String)
         case repoContributors(_ name: String)
         
@@ -55,7 +56,8 @@ struct GitHubAPI {
             .eraseToAnyPublisher()
     }
     
-    func mergeRepo(_ repo: RepoDetails.Basic) -> AnyPublisher<RepoDetails, Error> {
+    // merge repo's basic data with its contribiutors
+    func mergeRepo(_ repo: RepoDetails.Basic) -> AnyPublisher<RepoDetails, Never> {
         getRepoContributors(for: repo.name)
             .map { contributors in
                 RepoDetails(
@@ -65,6 +67,7 @@ struct GitHubAPI {
                     stargazers: repo.stargazers,
                     watchers: repo.watchers,
                     forks: repo.forks,
+                    language: repo.language,
                     contributors: contributors)
             }
             .eraseToAnyPublisher()
@@ -74,8 +77,10 @@ struct GitHubAPI {
         request(for: EndPoint.basicRepoDetails(name))
     }
     
-    func getRepoContributors(for name: String) -> AnyPublisher<[RepoDetails.Contributor], Error> {
+    func getRepoContributors(for name: String) -> AnyPublisher<[RepoDetails.Contributor], Never> {
         request(for: EndPoint.repoContributors(name))
+            // in case repo don't have contributors return empty array
+            .replaceError(with: [RepoDetails.Contributor]())
+            .eraseToAnyPublisher()
     }
-
 }

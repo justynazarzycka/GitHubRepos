@@ -24,13 +24,11 @@ extension RepoDetailsViewModel {
                                     case .finished:
                                         break
                                     case let .failure(error):
-                                        print(error)
                                         self.state = .error(error)
                                     }
                                     
                                 },
                                 receiveValue: { value in
-                                    print(value)
                                     self.state = .loaded
                                     self.repoDetails = value
                                 }))

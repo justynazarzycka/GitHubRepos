@@ -27,9 +27,13 @@ struct RepoDetailsView: View {
         return AnyView(
             ScrollView {
                 VStack(alignment: .leading) {
-                    Text(repo.name)
-                        .font(.title)
-                        .padding()
+                    
+                    HStack {
+                        Spacer()
+                        Text(repo.name)
+                            .font(.title)
+                        Spacer()
+                    }
                     
                     RepoStatistics(stars: repo.stargazers, watchers: repo.watchers, forks: repo.forks)
                         .padding()
@@ -49,11 +53,9 @@ struct RepoDetailsView: View {
                             
                         }.padding()
                     }
-                    
-                    if let contributors = repo.contributors {
-                    //ContributorsList(contributors: contributors)
-                        Text(contributors[0].login)
-                    }
+
+                    ContributorsList(contributors: repo.contributors)
+ 
                     
                     Spacer()
                 }

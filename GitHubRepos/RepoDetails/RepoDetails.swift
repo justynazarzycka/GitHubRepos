@@ -19,7 +19,7 @@ struct RepoDetails {
     
     // not every repo has a specified one language
     var language: String?
-    var contributors: [Contributor]?
+    var contributors: [Contributor]
 }
 
 extension RepoDetails {

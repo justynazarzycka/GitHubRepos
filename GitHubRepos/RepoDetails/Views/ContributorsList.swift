@@ -12,7 +12,7 @@ struct ContributorsList: View {
     var contributors: [RepoDetails.Contributor]
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             
             Text("Contributors:")
                 .font(.headline)
